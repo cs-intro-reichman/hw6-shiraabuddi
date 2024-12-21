@@ -110,7 +110,7 @@ public class Runigram {
 	// the three values r = lum, g = lum, b = lum.
 	private static Color luminance(Color pixel) {
 		//// Replace the following statement with your code
-		int lum = (int)(pixel.getRed()*0.229 + pixel.getGreen()*0.587 + pixel.getBlue()*0.114);
+		int lum = (int)(pixel.getRed()*0.299 + pixel.getGreen()*0.587 + pixel.getBlue()*0.114);
 		Color newcolor =  new Color(lum, lum, lum);
 		return newcolor;
 	}
@@ -141,7 +141,7 @@ public class Runigram {
 		for (int i = 0; i < height; i++) {
 			for (int j = 0; j < width; j++) {
 				int newh = (int)(newheight * i);
-				int neww = (int)(newwidth * i);
+				int neww = (int)(newwidth * j);
 				scaled[i][j]=image[newh][neww];
 			}
 		}
